@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="divcheck"></p>
+
+
+<center><h1 style="background-color:dodgerblue;color:white">    Vending Machine:
+</h1></center>
+<p style="color:black;background-color: yellow;"><b>Make a drink selection first before inputting money in order for this program to work properly. Refresh the site to purchase a different drink.</b> </p>
+
+
+<div id="purchaseDrinkMessage"></div>
+<center><p style="font-size: 20px;"id="moneyEntered">Current Money Deposited:    $ 0.00</p>
+</center>
+
+
+<center> <button onclick="addMoney()">    <img src="https://www.images-apmex.com/images/products/2020-niue-1-oz-proof-gold-hogwarts-castle_201641_slab.jpg?v=20200901040834&width=900&height=900" width="50px" height="50px"></center>
+    <center>
+        <p style="color:blue;"><b>Click to add 25cents</b></p>
+    
+    </center>
+    <center>    
+    <p style="font-size: 20px;" id="purchaseSuccessful"></p></center>
+    <p id="div1" style="padding:5px;color:red"></p>
+   <center>
+    <table>
+
+        <tr>
+            <td><img src="https://target.scene7.com/is/image/Target/GUEST_4f2bf9ec-55c4-4a9e-bf0d-61ebc5c9c110?wid=488&hei=488&fmt=pjpeg" height="250px" width="250px"></td>
+            <td><img src="https://target.scene7.com/is/image/Target/GUEST_7819ee30-1f78-46ee-a21c-d2096f99ba42" height="250px" width="250px"></td>
+            <td><img src="https://images.heb.com/is/image/HEBGrocery/000145592" height="250px" width="250px"></td>
+            <td><img src="https://www.liquor.com/thmb/hw-zIQt1GMIBYbj-HaqJYOBaaH0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__09__29082714__harry-potter-butterbeer-720x720-article-2a54151404fd40ff8cc6a62dc2bbe770.jpg" height="250px" width="250px"></td>
+        </tr>
+        <tr>
+                <td><center><h2>$3.00</h2></center></td>
+                <td><center><h2>$2.50</h2></center></td>
+                <td><center><h2>$2.75</h2></center></td>
+                <td><center><h2>$7.00</h2></center></td>
+
+
+        </tr>
+        <tr>
+            <td><div id="spriteChoice"></div></td>
+            <td><div id="cokeChoice"> </div></td>
+            <td><div id="poweradeChoice"></div></td>
+            <td><div id="butterBeerChoice"></div></td>
+
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td><center><button id="sprite" onclick="spriteSelected()">Purchase</button></center></td>
+            <td><center><button id="coke" onclick="cokeSelected()">Purchase</button></center></td>
+            <td><center><button id="powerade" onclick="poweradeSelected()">Purchase</button></center></td>
+            <td><center><button id="butterBeer" onclick="butterBeerSelected()">Purchase</button></center></td>
+
+
+        </tr>
+    </table>
+   </center>
+
+       <script>
+
+        window.alert("[Very important] Please press a drink selection before inputting money in order for this program to work properly.");
+
+        var sprite = 3.00;
+        var coke = 2.50;
+        var powerade = 2.75;
+        var butterBeer = 7.00;
+        
+
+                    var moneyIn = 0;
+
+       function addMoney() {
+      
+                     moneyIn += .25;
+
+                     document.getElementById("moneyEntered").innerHTML = "Current Money Deposited:    $ " + moneyIn.toFixed(2);
+
+                   if(document.getElementById("spriteChoice").style.backgroundColor == "blue") {
+
+                        if(sprite <= moneyIn) {
+                            document.getElementById("purchaseDrinkMessage").innerHTML = "<center><h2>You've successfully purchased a sprite.</h2></center>"
+                        }
+                    }
+
+                    if(document.getElementById("cokeChoice").style.backgroundColor == "blue") {
+
+                        if(coke <= moneyIn) {
+                            document.getElementById("purchaseDrinkMessage").innerHTML = "<center><h2>You've successfully purchased a coke.</h2></center>"
+                        }
+                    }
+                 
+
+                    if(document.getElementById("poweradeChoice").style.backgroundColor == "blue") {
+
+                        if(powerade <= moneyIn) {
+                            document.getElementById("purchaseDrinkMessage").innerHTML = "<center><h2>You've successfully purchased a powerade.</h2></center>"
+                        }
+                    }
+
+                    if(document.getElementById("butterBeerChoice").style.backgroundColor == "blue") {
+
+                    if(butterBeer <= moneyIn) {
+                         document.getElementById("purchaseDrinkMessage").innerHTML = "<center><h2>You've successfully purchased a Butter Beer.</h2></center>"
+                            }
+                            }
+
+
+   }
+
+
+
+      function spriteSelected() {
+                 document.getElementById("div1").style.backgroundColor = "bisque";
+                 document.getElementById("div1").innerHTML = "<center><b>The Sprite option is $" + sprite.toFixed(2) + "</b></center>";
+
+                 document.getElementById("spriteChoice").innerHTML = "<center>Selected</center>";
+                 document.getElementById("spriteChoice").style = "background-color:blue;padding:10px;color:white";
+                      document.getElementById("cokeChoice").style = "background-color:white;padding:10px;color:white";
+                     document.getElementById("poweradeChoice").style = "background-color:white;padding:10px;color:white";
+                     document.getElementById("butterBeerChoice").style = "background-color:white;padding:10px;color:white";
+
+
+               
+
+        }
+
+        function cokeSelected() {
+                 document.getElementById("div1").style.backgroundColor = "bisque";
+                 document.getElementById("div1").innerHTML = "<center><b>The Coke option is $" + coke.toFixed(2) + "</b></center>";
+
+                 document.getElementById("cokeChoice").innerHTML = "<center>Selected</center>";
+                 document.getElementById("cokeChoice").style = "background-color:blue;padding:10px;color:white";
+                      document.getElementById("spriteChoice").style = "background-color:white;padding:10px;color:white";
+                      document.getElementById("poweradeChoice").style = "background-color:white;padding:10px;color:white";
+                      document.getElementById("butterBeerChoice").style = "background-color:white;padding:10px;color:white";
+
+
+               
+
+        }
+   
+        function poweradeSelected() {
+                 document.getElementById("div1").style.backgroundColor = "bisque";
+                 document.getElementById("div1").innerHTML = "<center><b>The Powerade option is $" + powerade.toFixed(2) + "</b></center>";
+
+                 document.getElementById("poweradeChoice").innerHTML = "<center>Selected</center>";
+                 document.getElementById("poweradeChoice").style = "background-color:blue;padding:10px;color:white";
+                        document.getElementById("spriteChoice").style = "background-color:white;padding:10px;color:white";
+                        document.getElementById("cokeChoice").style = "background-color:white;padding:10px;color:white";
+                        document.getElementById("butterBeerChoice").style = "background-color:white;padding:10px;color:white";
+
+
+
+        }
+
+        function butterBeerSelected() {
+                 document.getElementById("div1").style.backgroundColor = "bisque";
+                 document.getElementById("div1").innerHTML = "<center><b>The Butter Beer option is $" + butterBeer.toFixed(2) + "</b></center>";
+
+                 document.getElementById("butterBeerChoice").innerHTML = "<center>Selected</center>";
+                 document.getElementById("butterBeerChoice").style = "background-color:blue;padding:10px;color:white";
+                        document.getElementById("spriteChoice").style = "background-color:white;padding:10px;color:white";
+                        document.getElementById("cokeChoice").style = "background-color:white;padding:10px;color:white";
+                        document.getElementById("poweradeChoice").style = "background-color:white;padding:10px;color:white";
+
+
+
+        }
+        
+
+    </script>
+</body>
+</html>
