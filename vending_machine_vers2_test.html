@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <table>
+        <tr>
+            <td>    <div><img src="https://www.360connect.com/wp-content/uploads/2020/08/pexels-erik-mclean-4062275-1024x1024.jpg" width="700px" height="700px"></div>
+            </td>
+    <td>   
+   <div style="padding: 0px 0px 0px 10px"><pre>       Cost to purchase:</pre> <br><br>
+       <p id="Hello" style="color:white">Hello</p>
+    </div>
+
+    <div style="padding: 0px 0px 0px 20px">   
+        <p id="Hello" style="color:white">Hello</p>
+ </div>
+    <div>  <p id="value"></p>
+        <p id="switch"></p></div><br><br><br>
+   <div>     <center>
+    <button id="coke" onclick="cokeSelected()">coke</button><br><br>
+    <button>coke zero</button><br><br>
+    <button>diet coke</button><br><br>
+    <button>sprite</button><br><br>
+    <button>fanta</button><br><br>
+    <button>vitamin water (plain)</button><br><br>
+    <button>vitamin water (pomegranate)</button><br><br>
+    <button>monster</button><br><br>
+</center></div>
+    </td>
+        </tr>
+    </table>
+
+
+   
+
+    <script>
+                var drink = "";
+
+
+      function cokeSelected() {
+        document.getElementById("coke").style = "background-color:green;color:white";
+        
+        if(document.getElementById("coke").style.backgroundColor == "green"){
+            document.getElementById("Hello").style.color = "black";
+
+    document.getElementById("Hello").innerHTML = "$3.00";
+}
+
+
+}
+
+
+
+
+      
+    </script>
+
+</body>
+</html>
