@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #first {
+            color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: medium;
+
+        }
+
+        #demo {
+            color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: medium;
+        }
+
+        #other {
+            color:white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: medium;
+        }
+
+        #line {
+            color:white;
+        }
+
+        #cell1 {
+            padding:5px;
+        }
+        #cell2 {
+            padding:5px;
+        }
+    </style>
+
+</head>
+<body id="body"><center>
+<button onclick="Random()">Random num</button>
+    <script>
+        function Random() {
+            let num = Math.floor(Math.random() * 5);
+            document.getElementById("demo").innerHTML = '<img src="' + whiskeyImgs[num] + '"><br><br><br>' + '<div style="border:solid 1px; padding:5px">'+ whiskeyInfo[num] + '</div>';
+            document.getElementById("body").style.backgroundColor = bgcolor[num];
+            document.getElementById("other").innerHTML = '<div style="border:solid 1px; padding:5px">' + ginInfo[num] + '</div>' + '<br><br><img src="' + ginImgs[num] + '"><br><br><br>';
+            document.getElementById("first").innerHTML = '<div style="border:solid 1px; padding:5px">' + wineInfo[num] + '</div>' + '<br><br><img src="' + wineImgs[num] + '"><br><br><br>';
+          
+            
+        }
+
+        function newCar() {
+            let num = Math.floor(Math.random() * 5);
+            document.getElementById("cars").innerHTML = '<img src="' + fancyCars[num] + '" width="650px" height="400px">';
+            document.getElementById("cars").style.width = '400px';
+            document.getElementById("cars").style.height = '400px';
+            document.getElementById("body").style.backgroundColor = bgcolor[num];
+
+
+        }
+
+        const diceDisplay = "hello";
+
+        function rollDice() {
+            let num = Math.floor(Math.random() * 6);
+            document.getElementById("dice1").innerHTML = '<img src="' + diceImgs[num] + '" width="200px" height="200px" style="background-color:white">';
+            document.getElementById("body").style.backgroundColor = bgcolor[num];
+
+
+        }
+
+        function rollDice2() {
+            let num = Math.floor(Math.random() * 6);
+            document.getElementById("dice2").innerHTML = '<img src="' + diceImgs[num] + '" width="200px" height="200px" style="background-color:white">';
+            document.getElementById("body").style.backgroundColor = bgcolor[num];
+
+
+        }
+
+        function rollDicesTgt() {
+            rollDice();
+            rollDice2();
+
+        }
+
+
+
+        const whiskeyImgs = ["https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h3d/h2c/10063799549982.png", 
+        "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h67/hc7/11770058670110.png", 
+        "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h6b/he2/26556763373598.png",
+    "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h0e/h8e/15949502775326.png",
+    "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h45/hbd/14396701048862.png"
+];
+
+        const whiskeyInfo = ["Tennessee- Sour mash whiskey made in Tennessee from natural corn, rye, barley malt and then charcoal filtered. Sweet with caramel, vanilla and charred wood. Pure, clean, and smooth. Classic. Enjoy on the rocks or in mixed drinks.",
+        "There's vanilla, cinnamon, and...oh, right, honey! The honey here is not shy, but not generic either, there's a nice floral, herbal complexity to it. Drinks smooth and warm, not overly sweet...dialed-back cinnamon and a dash of cocoa in the finish.",
+        "Bottled exclusively from a dumping of 70 barrels or less, all drawn from the middle to upper floors of the traditional metal clad rickhouses. It is the original Small Batch Bourbon, having been made available even before the term was invented.",
+        "The original Walker family blend, handcrafted from as many as 40 of the finest Scotch whiskies aged a minimum of 12 years, for a smooth and robust blend. Rich smoky malt, peat and sherry fruit character deliver a satisfyingly complex flavor on the long, lingering finish.",
+        "Created from the rarest and most expensive whiskies in the world, individually numbered and produced in limited quantities. Johnnie Walker Blue has the authentic character and flavor of a traditional 19th century blend with traces of smoke, honey and spice on the silky finish."
+    ]
+
+        const bgcolor = ["dodgerblue", "maroon", "brown", "navy", "darkcyan"];
+
+        const ginImgs = ["https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h58/h33/9977654214686.png",
+    "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h8d/h4b/11443309281310.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/he5/h57/8806112329758.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h37/h5f/16596176863262.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h84/h75/10946099740702.png"];
+
+        const ginInfo = ["England-The spirit is triple distilled, and the alcohol vapors are passed through bundles of the herbs and spices in order to gain flavor and aroma of almond, lemon peel, liquorice, juniper berries, orris root, angelica, coriander, cassia, cubeb, and grains of paradise.",
+    "Scotland- The Botanist is a gin of layered complexity. 22 hand-foraged local botanicals delicately augment nine berries, barks, seeds and peels during an achingly slow distillation. This unique Islay dry gin is a rare expression of the heart and soul of our remote Scottish island.",
+"Scotland- The original Hendrick's Gin, oddly infused with Rose and Cucumber. Not surprisingly, awarded Platinum at LA Spirit Awards and Silver at SF World Sprits Awards in 2020.",
+"Wine Enthusiast-France- Bright, citrusy aroma. Super silky with big licorice and juniper twang and slight quinine flavor. The sweet, lingering finish evokes pink peppercorns, citrus peel and white wildflowers. Double Gold Medal- San Francisico Spirits Competition. 5 Stars-Spirit Journal.",
+"Spain -Akori gin is the result of a bold combination of mainly rice based grain alcohol, juniper and aromatic selection of Japanese inspired botanicals. A freshness of juniper and delicate notes of Dragon fruit and Kumquat make this gin perfect for a Gin & Tonic. SF Spirits Medal"]
+
+        const wineImgs = ["https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h4a/hdc/17191950909470.png",
+    "https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h7c/h16/10336102285342.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h34/h01/15949503528990.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h91/h5e/17160734048286.png",
+"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h0a/hdd/13920715145246.png"]
+
+        const wineInfo = ["Some cherry, crushed stone and slate aromas with hints of roses and white pepper follow through to a medium body. Creamy structure with phenolics and framing. Mostly grenache with some cinsault, syrah and carignan. Drink now",
+    "American Cardinale is a classic San Antonio Winery blend. A refreshing juicy dark red wine perfect for many occasions. Full of dark berry flavor with hints of spice.",
+"This is a rich, dense red with blackberry and blueberry aromas and flavors. Extremely well-crafted tannins. Hints of vanilla to the ripe fruit at the end. Incredible value...already beautiful to taste",
+"Simply gorgeous! A crisp, clean blend of 90% Pinot Noir and 10% Chardonnay from the famed Bouzy region. Pale gold in color, with a nose of red fruit followed by a lively palate filled with pin-point bubbles that caress the palate into a long, refreshing finish",
+"This vivid Champagne shows up-front and linear definition, thanks to rapier-like acidity, with finely meshed flavors of ripe black cherry and mandarin orange fruit, raw almond, anise and cardamom spice"]
+
+        const fancyCars = ["https://cdn.motor1.com/images/mgl/W0vGL/s3/2020-land-rover-range-rover-evoque-u-s-spec.jpg",
+    "https://st.arenaev.com/news/22/06/buick-electra-x-concept/inline/-1200/arenaev_000.jpg",
+"https://www.slashgear.com/img/gallery/the-15-best-infiniti-cars-of-all-time/l-intro-1656097839.jpg",
+"https://imageio.forbes.com/specials-images/imageserve/6138bd97cc530a2029b7a474/0x0.jpg?format=jpg&width=1200",
+"https://i0.wp.com/gaycarboys.com/wp-content/uploads/2019/08/Infinity_Black_S0022.jpg?fit=800%2C534&ssl=1"];
+
+
+        const diceImgs = ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Dice-1.svg/240px-Dice-1.svg.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dice-2.svg/240px-Dice-2.svg.png",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Dice-3.svg/240px-Dice-3.svg.png",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Dice-4.svg/240px-Dice-4.svg.png",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Dice-5.svg/240px-Dice-5.svg.png",
+"https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dice-6.svg/240px-Dice-6.svg.png"];
+
+
+    </script>
+
+    <table>
+        <tr>
+          
+            <td><p id="first"></p></td>
+            <td>    <p id="demo"></p>
+            </td>
+            <td><p id="other"></p></td>
+        </tr>
+    </table>
+
+</center>
+<hr id="line">
+<br>
+
+<center>
+    <button onclick="newCar()">Random num</button>
+    <br><br>
+    <p id="cars"></p>
+
+</center>
+<hr id="line">
+<br>
+<center>
+    <button onclick="rollDicesTgt()">Roll the dice</button>
+    
+    <table>
+        <tr>
+            <td id="cell1"><p id="dice1"></p></td>
+            <td id="cell2"><p id="dice2"></p></td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
